@@ -13,3 +13,7 @@ export const messageInvalidCredentials = 'Invalid credentials';
 export const messageProfileRetrieved = 'Profile retrieved';
 export const messageUnauthorized = 'Unauthorized';
 export const messageLoginSuccessful = 'Login successful';
+export const messageTaskCreated = 'The Task has been successfully created';
+export const messageTaskRetrieved = 'Tasks retrieved';
+export const messageTaskUpdated = 'The Task has been successfully updated';
+export const messageTaskDeleted = 'The Task has been successfully deleted';
