@@ -17,12 +17,18 @@ import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
 import {
   ApiBearerAuth,
   ApiBody,
+  ApiOperation,
   ApiParam,
   ApiQuery,
   ApiResponse,
   ApiTags,
 } from '@nestjs/swagger';
-import { messageTaskCreated, messageTaskDeleted, messageTaskRetrieved, messageTaskUpdated } from 'src/utils/message';
+import {
+  messageTaskCreated,
+  messageTaskDeleted,
+  messageTaskRetrieved,
+  messageTaskUpdated,
+} from 'src/utils/message';
 import { Task } from '../entity/task.entity';
 @ApiBearerAuth()
 @ApiTags('tasks')
@@ -32,6 +38,7 @@ export class TasksController {
 
   @Post()
   @UseGuards(JwtAuthGuard)
+  @ApiOperation({ summary: 'Create task' })
   @ApiBody({ type: CreateTaskDto })
   @ApiResponse({
     status: 201,
@@ -45,6 +52,7 @@ export class TasksController {
 
   @Get()
   @UseGuards(JwtAuthGuard)
+  @ApiOperation({ summary: 'Retrieve tasks' })
   @ApiQuery({ name: 'completed', required: false, type: Boolean })
   @ApiResponse({
     status: 200,
@@ -58,6 +66,7 @@ export class TasksController {
 
   @Get(':id')
   @UseGuards(JwtAuthGuard)
+  @ApiOperation({ summary: 'Retrieve task by ID' })
   @ApiParam({ name: 'id', type: String, required: true })
   @ApiResponse({
     status: 200,
@@ -70,6 +79,7 @@ export class TasksController {
 
   @Put(':id')
   @UseGuards(JwtAuthGuard)
+  @ApiOperation({ summary: 'Update task' })
   @ApiParam({ name: 'id', type: String, required: true })
   @ApiBody({ type: CreateTaskDto })
   @ApiResponse({
@@ -83,6 +93,7 @@ export class TasksController {
 
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
+  @ApiOperation({ summary: 'Delete task' })
   @ApiParam({ name: 'id', type: String, required: true })
   @ApiResponse({
     status: 204,
