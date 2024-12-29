@@ -9,3 +9,7 @@ export const messageErrorCreatingTask = 'Error creating the task';
 export const messageErrorUpdatingTask = 'Error updating the task';
 export const messageErrorDeletingTask = 'Error deleting the task';
 export const messageErrorRetrievingTasks = 'Error retrieving tasks';
+export const messageInvalidCredentials = 'Invalid credentials';
+export const messageProfileRetrieved = 'Profile retrieved';
+export const messageUnauthorized = 'Unauthorized';
+export const messageLoginSuccessful = 'Login successful';

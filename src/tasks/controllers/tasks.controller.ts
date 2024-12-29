@@ -14,7 +14,9 @@ import {
 import { TasksService } from '../services/tasks.service';
 import { CreateTaskDto, UpdateTaskDto } from '../dto';
 import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
-
+import { ApiBearerAuth, ApiTags } from '@nestjs/swagger';
+@ApiBearerAuth()
+@ApiTags('tasks')
 @Controller('api/tasks')
 export class TasksController {
   constructor(private readonly tasksService: TasksService) {}
