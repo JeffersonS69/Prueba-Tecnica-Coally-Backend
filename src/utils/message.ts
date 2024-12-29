@@ -1,0 +1,11 @@
+export const messageParamTitleEmpty = 'Title cannot be empty';
+export const messageParamTitleString = 'Title must be a string';
+export const messageParamDescriptionString = 'Description must be a string';
+export const messageParamCompletedBoolean = 'Completed must be a boolean';
+export const messageTaskNotFound = 'Task not found';
+export const messageInvalidTaskId = 'Invalid task ID';
+export const messageInvalidData = 'Invalid data provided';
+export const messageErrorCreatingTask = 'Error creating the task';
+export const messageErrorUpdatingTask = 'Error updating the task';
+export const messageErrorDeletingTask = 'Error deleting the task';
+export const messageErrorRetrievingTasks = 'Error retrieving tasks';
