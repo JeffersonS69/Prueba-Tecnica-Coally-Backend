@@ -12,7 +12,7 @@ import envs from './config/envs';
       load: [envs],
       isGlobal: true,
     }),
-    MongooseModule.forRoot(process.env.BASE_URL_MONGO),
+    MongooseModule.forRoot(process.env.MONGO_URL),
     AuthModule,
     TasksModule,
   ],
