@@ -22,7 +22,7 @@ import {
   messageLoginSuccessful,
   messageProfileRetrieved,
   messageUnauthorized,
-} from 'src/utils/message';
+} from '../../utils/message';
 import { Profile, Token, User } from '../entity';
 
 @ApiTags('auth')

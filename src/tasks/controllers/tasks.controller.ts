@@ -13,7 +13,7 @@ import {
 } from '@nestjs/common';
 import { TasksService } from '../services/tasks.service';
 import { CreateTaskDto, UpdateTaskDto } from '../dto';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
 import {
   ApiBearerAuth,
   ApiBody,
@@ -28,7 +28,7 @@ import {
   messageTaskDeleted,
   messageTaskRetrieved,
   messageTaskUpdated,
-} from 'src/utils/message';
+} from '../../utils/message';
 import { Task } from '../entity/task.entity';
 @ApiBearerAuth()
 @ApiTags('tasks')

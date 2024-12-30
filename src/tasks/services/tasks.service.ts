@@ -13,10 +13,9 @@ import {
   messageErrorDeletingTask,
   messageErrorRetrievingTasks,
   messageErrorUpdatingTask,
-  messageInvalidData,
   messageInvalidTaskId,
   messageTaskNotFound,
-} from 'src/utils/message';
+} from '../../utils/message';
 
 @Injectable()
 export class TasksService {
@@ -29,10 +28,7 @@ export class TasksService {
       const createdTask = new this.taskModel(createTaskDto);
       return await createdTask.save();
     } catch (error) {
-      if (error.name === 'ValidationError') {
-        throw new BadRequestException(messageInvalidData);
-      }
-      throw new InternalServerErrorException(messageErrorCreatingTask);
+      throw new BadRequestException(messageErrorCreatingTask);
     }
   }
 

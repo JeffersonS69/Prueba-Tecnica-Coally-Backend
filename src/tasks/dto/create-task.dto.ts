@@ -5,7 +5,7 @@ import {
   messageParamDescriptionString,
   messageParamTitleEmpty,
   messageParamTitleString,
-} from 'src/utils/message';
+} from '../../utils/message';
 
 export class CreateTaskDto {
   @ApiProperty({ example: 'Examen de programación' })
